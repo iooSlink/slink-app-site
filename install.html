@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.t.install">Cara pasang Slink di Android, iPhone, Windows, Mac, Linux, dan browser</title>
+<meta name="description" content="Langkah demi langkah memasang Slink di Android, iPhone, Windows, Mac, Linux, atau memainkannya di browser." data-i18n-attr="content:meta.d.install">
+<meta name="theme-color" content="#f9fafb">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Slink">
+<meta property="og:title" content="Cara pasang Slink di Android, iPhone, Windows, Mac, Linux, dan browser" data-i18n-attr="content:meta.t.install">
+<meta property="og:description" content="Langkah demi langkah memasang Slink di Android, iPhone, Windows, Mac, Linux, atau memainkannya di browser." data-i18n-attr="content:meta.d.install">
+<meta property="og:image" content="__SITE_URL__/assets/og.jpg">
+<meta property="og:url" content="__SITE_URL__/install.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Inter-Regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="i-android" viewBox="0 0 24 24"><path d="M4 15.5a8 8 0 0 1 16 0Z"/><path d="m7.5 3.4 2 4.4"/><path d="m16.5 3.4-2 4.4"/><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M4 19.5h16"/></symbol>
+<symbol id="i-windows" viewBox="0 0 24 24"><path d="M3 5.4 10.5 4.3v7.2H3zM11.5 4.15 21 2.8v8.7h-9.5zM3 12.5h7.5v7.2L3 18.6zM11.5 12.5H21v8.7l-9.5-1.35z"/></symbol>
+<symbol id="i-mac" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></symbol>
+<symbol id="i-linux" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+</defs></svg>
+<a class="skip" href="#main" data-i18n="skip">Lewati ke isi</a>
+<header class="topnav solid">
+  <div class="topnav-in">
+    <a class="brand" href="index.html" aria-label="Slink"><img src="assets/logo-dark.png" alt="Slink" width="97" height="40"></a>
+    <nav class="menu" aria-label="Menu utama" data-i18n-attr="aria-label:nav.label">
+      <a href="index.html#unduh" data-i18n="nav.download">Unduh</a>
+      <a href="index.html#fitur" data-i18n="nav.features">Fitur</a>
+      <a href="index.html#layar" data-i18n="nav.screens">Tampilan</a>
+      <a href="changelog.html" data-i18n="nav.releases">Versi</a>
+      <a href="help.html" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Bahasa" data-i18n-attr="aria-label:lang.label"><button type="button" data-lang="id" aria-pressed="true">ID</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu" data-i18n-attr="aria-label:menu.open.a">
+      <svg class="ico open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="ico close" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="index.html#unduh" data-i18n="nav.download">Unduh</a>
+      <a href="index.html#fitur" data-i18n="nav.features">Fitur</a>
+      <a href="index.html#layar" data-i18n="nav.screens">Tampilan</a>
+      <a href="changelog.html" data-i18n="nav.releases">Versi</a>
+      <a href="help.html" data-i18n="nav.faq">FAQ</a>
+    <div class="mm-foot"><span data-i18n="lang.label.t">Bahasa</span><div class="lang" role="group" aria-label="Bahasa" data-i18n-attr="aria-label:lang.label"><button type="button" data-lang="id" aria-pressed="true">ID</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></div>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <div class="page-head">
+    <h1 data-i18n="in.h1"><span class="dim">Cara</span> pasang.</h1>
+    <p class="lead" data-i18n="in.lead">Pilih perangkatmu. Semua langkah di bawah memakai berkas dari halaman Unduh.</p>
+  </div>
+  <nav class="tabs" aria-label="Platform" data-i18n-attr="aria-label:in.tabs"><ul><li><a href="#android"><svg class="ico" aria-hidden="true"><use href="#i-android"/></svg>Android</a></li><li><a href="#iphone"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>iPhone</a></li><li><a href="#windows"><svg class="ico fill" aria-hidden="true"><use href="#i-windows"/></svg>Windows</a></li><li><a href="#mac"><svg class="ico" aria-hidden="true"><use href="#i-mac"/></svg>Mac</a></li><li><a href="#linux"><svg class="ico" aria-hidden="true"><use href="#i-linux"/></svg>Linux</a></li><li><a href="#web"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>Browser</a></li></ul></nav>
+  <section class="plat" id="android" data-platform="android" data-state="loading">
+      <div class="plat-head">
+        <svg class="ico" aria-hidden="true"><use href="#i-android"/></svg>
+        <h2>Android</h2>
+        <a class="btn btn-solid" data-dl="android" href="index.html#android"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span class="when-ready" data-i18n="btn.apk">Unduh APK</span><span class="when-soon" data-i18n="btn.soon">Segera hadir</span></a>
+      </div>
+      <p class="lead" data-i18n="ld.android">Slink dibagikan sebagai berkas APK, bukan lewat Play Store. Android akan meminta izin memasang dari sumber luar; itu normal.</p>
+      <p class="meta" data-meta hidden></p>
+      <ol class="steps">
+        <li><span data-i18n="st.android.1"><strong>Unduh Slink.apk</strong> dengan tombol di atas, memakai Chrome atau browser lain.</span></li><li><span data-i18n="st.android.2"><strong>Buka berkasnya</strong> dari notifikasi unduhan atau aplikasi Berkas.</span></li><li><span data-i18n="st.android.3">Kalau muncul peringatan "pasang aplikasi tidak dikenal", ketuk <strong>Setelan</strong>, izinkan browser atau Berkas memasang aplikasi, lalu kembali dan ketuk <strong>Pasang</strong>.</span></li><li><span data-i18n="st.android.4">Buka Slink dari layar utama.</span></li>
+      </ol>
+      
+      <div class="note"><p data-i18n="nt.android.1">Kalau Play Protect memberi peringatan, itu karena aplikasi tidak berasal dari Play Store. Ketuk <strong>Detail</strong> lalu <strong>Tetap pasang</strong>. Ingin memeriksa berkasnya lebih dulu? Cocokkan SHA-256 di bawah.</p></div>
+      <p class="hash" data-hash="android" hidden>SHA-256: <code></code></p>
+    </section>
+  <section class="plat" id="iphone" data-platform="iphone" data-state="loading">
+      <div class="plat-head">
+        <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
+        <h2>iPhone & iPad</h2>
+        <a class="btn btn-solid" data-dl="iphone" href="index.html#iphone"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span class="when-ready" data-i18n="btn.ipa">Unduh IPA</span><span class="when-soon" data-i18n="btn.soon">Segera hadir</span></a>
+      </div>
+      <p class="lead" data-i18n="ld.iphone">iPhone hanya menjalankan aplikasi yang ditandatangani. Berkas .ipa Slink belum ditandatangani, jadi kamu menandatanganinya sendiri dengan Apple ID gratis lewat AltStore atau Sideloadly. Bagian ini masih eksperimental dan belum diuji di perangkat sungguhan.</p>
+      <p class="meta" data-meta hidden></p>
+      <ol class="steps">
+        <li><span data-i18n="st.iphone.1">Pasang <strong>AltStore</strong> (altstore.io) di komputer dan iPhone-mu, ikuti petunjuk resminya.</span></li><li><span data-i18n="st.iphone.2">Unduh <strong>Slink-ios-unsigned.ipa</strong> ke iPhone.</span></li><li><span data-i18n="st.iphone.3">Di AltStore buka tab <strong>My Apps</strong>, ketuk <strong>+</strong>, lalu pilih berkas .ipa itu.</span></li><li><span data-i18n="st.iphone.4">Buka <strong>Pengaturan › Umum › VPN &amp; Manajemen Perangkat</strong> dan percayai profil Apple ID-mu, lalu buka Slink.</span></li>
+      </ol>
+      
+      <div class="note"><p data-i18n="nt.iphone.1">Dengan Apple ID gratis, aplikasi hanya berlaku 7 hari lalu perlu ditandatangani ulang (AltStore melakukannya otomatis selama iPhone dan komputermu satu jaringan). Sideloadly dan Xcode juga bisa dipakai.</p></div>
+      <p class="hash" data-hash="iphone" hidden>SHA-256: <code></code></p>
+    </section>
+  <section class="plat" id="windows" data-platform="windows" data-state="loading">
+      <div class="plat-head">
+        <svg class="ico fill" aria-hidden="true"><use href="#i-windows"/></svg>
+        <h2>Windows</h2>
+        <a class="btn btn-solid" data-dl="windows" href="index.html#windows"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span class="when-ready" data-i18n="btn.zip">Unduh ZIP</span><span class="when-soon" data-i18n="btn.soon">Segera hadir</span></a>
+      </div>
+      <p class="lead" data-i18n="ld.windows">Satu berkas ZIP berisi Slink.exe dan folder assets. Tidak perlu pemasang.</p>
+      <p class="meta" data-meta hidden></p>
+      <ol class="steps">
+        <li><span data-i18n="st.windows.1">Unduh <strong>Slink-windows-x64.zip</strong>.</span></li><li><span data-i18n="st.windows.2">Klik kanan berkas ZIP, pilih <strong>Extract All</strong> (Ekstrak semua), lalu pilih folder tujuan. Jangan menjalankannya dari dalam ZIP: folder <code>assets</code> harus berada di sebelah <code>Slink.exe</code>.</span></li><li><span data-i18n="st.windows.3">Buka <strong>Slink.exe</strong>.</span></li><li><span data-i18n="st.windows.4">Kalau muncul "Windows protected your PC" (SmartScreen), klik <strong>More info</strong> lalu <strong>Run anyway</strong>.</span></li>
+      </ol>
+      
+      <div class="note"><p data-i18n="nt.windows.1">SmartScreen muncul karena Slink belum memakai sertifikat tanda tangan digital berbayar. Berkasnya sama dengan yang dibangun otomatis di GitHub; cocokkan SHA-256 di bawah bila ingin memastikan.</p></div>
+      <p class="hash" data-hash="windows" hidden>SHA-256: <code></code></p>
+    </section>
+  <section class="plat" id="mac" data-platform="mac" data-state="loading">
+      <div class="plat-head">
+        <svg class="ico" aria-hidden="true"><use href="#i-mac"/></svg>
+        <h2>Mac</h2>
+        <a class="btn btn-solid" data-dl="mac" href="index.html#mac"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span class="when-ready" data-i18n="btn.zip">Unduh ZIP</span><span class="when-soon" data-i18n="btn.soon">Segera hadir</span></a>
+      </div>
+      <p class="lead" data-i18n="ld.mac">Satu aplikasi untuk Mac Intel dan Apple Silicon (M1 dan setelahnya).</p>
+      <p class="meta" data-meta hidden></p>
+      <ol class="steps">
+        <li><span data-i18n="st.mac.1">Unduh <strong>Slink-macos-universal.zip</strong>. Safari membukanya otomatis menjadi <code>Slink.app</code>; browser lain, klik dua kali ZIP-nya.</span></li><li><span data-i18n="st.mac.2">Seret <strong>Slink.app</strong> ke folder <strong>Applications</strong>.</span></li><li><span data-i18n="st.mac.3">Pertama kali: klik kanan <strong>Slink.app</strong>, pilih <strong>Open</strong>, lalu <strong>Open</strong> sekali lagi. Di macOS 15 ke atas, buka sekali lalu pilih <strong>Open Anyway</strong> di <strong>System Settings › Privacy &amp; Security</strong>.</span></li>
+      </ol>
+      
+      <div class="note"><p data-i18n="nt.mac.1">Slink belum dinotarisasi Apple, jadi Gatekeeper memblokir klik dua kali yang pertama. Kalau macOS bilang aplikasinya "rusak", hapus tanda karantinanya dengan perintah ini di Terminal:</p></div>
+      <div class="code"><pre><code>xattr -dr com.apple.quarantine /Applications/Slink.app</code></pre><button class="copy" type="button" data-copy aria-label="Salin" data-i18n-attr="aria-label:copy.a"><svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+      <p class="hash" data-hash="mac" hidden>SHA-256: <code></code></p>
+    </section>
+  <section class="plat" id="linux" data-platform="linux" data-state="loading">
+      <div class="plat-head">
+        <svg class="ico" aria-hidden="true"><use href="#i-linux"/></svg>
+        <h2>Linux</h2>
+        <a class="btn btn-solid" data-dl="linux" href="index.html#linux"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span class="when-ready" data-i18n="btn.targz">Unduh TAR.GZ</span><span class="when-soon" data-i18n="btn.soon">Segera hadir</span></a>
+      </div>
+      <p class="lead" data-i18n="ld.linux">Satu folder berisi program dan assets. Butuh pustaka sistem yang umum (ALSA atau PulseAudio, X11 atau Wayland, OpenGL).</p>
+      <p class="meta" data-meta hidden></p>
+      <ol class="steps">
+        <li><span data-i18n="st.linux.1">Unduh <strong>Slink-linux-x86_64.tar.gz</strong>.</span></li><li><span data-i18n="st.linux.2">Ekstrak dan jalankan dengan perintah di bawah, atau klik dua kali <code>slink</code> di pengelola berkasmu.</span></li>
+      </ol>
+      
+      
+      <div class="code"><pre><code>tar -xzf Slink-linux-x86_64.tar.gz
+cd Slink-linux-x86_64
+./slink</code></pre><button class="copy" type="button" data-copy aria-label="Salin" data-i18n-attr="aria-label:copy.a"><svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+      <p class="hash" data-hash="linux" hidden>SHA-256: <code></code></p>
+    </section>
+  <section class="plat" id="web" data-platform="web" data-state="loading">
+      <div class="plat-head">
+        <svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>
+        <h2>Browser</h2>
+        <a class="btn btn-solid" data-dl="web" href="play/"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg><span class="when-ready" data-i18n="btn.play">Main sekarang</span><span class="when-soon" data-i18n="btn.soon">Segera hadir</span></a>
+      </div>
+      <p class="lead" data-i18n="ld.web">Tanpa pasang: buka lalu main. Versi browser hanya punya mode offline melawan bot, karena browser tidak boleh membuka koneksi TCP yang dipakai server Slither.io.</p>
+      <p class="meta" data-meta hidden></p>
+      <ol class="steps">
+        <li><span data-i18n="st.web.1">Buka <strong>Main sekarang</strong>. Pertama kali, game butuh beberapa detik untuk memuat.</span></li><li><span data-i18n="st.web.2">Di ponsel: Chrome, menu ⋮ › <strong>Tambahkan ke layar utama</strong>. Di Safari: tombol Bagikan › <strong>Tambah ke Layar Utama</strong>. Cara ini hanya membuat pintasan supaya lebih cepat dibuka.</span></li><li><span data-i18n="st.web.3">Skor tertinggi dan setelanmu tersimpan di browser ini. Menghapus data situs akan menghapusnya juga.</span></li>
+      </ol>
+      
+      
+      
+    </section>
+  <section class="plat" id="verify">
+      <div class="plat-head">
+        <svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>
+        <h2 data-i18n="vf.title">Memeriksa berkas</h2>
+      </div>
+      <p class="lead" data-i18n="vf.lead">Setiap berkas dibangun otomatis di GitHub. Untuk memastikan unduhanmu tidak berubah di jalan, hitung SHA-256-nya dan cocokkan dengan nilai yang tampil di bagian platform di atas.</p>
+      <ol class="steps">
+        <li><span data-i18n="vf.win">Windows (PowerShell):</span><div class="code"><pre><code>Get-FileHash .\Slink-windows-x64.zip -Algorithm SHA256</code></pre><button class="copy" type="button" data-copy aria-label="Salin" data-i18n-attr="aria-label:copy.a"><svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg></button></div></li>
+        <li><span data-i18n="vf.mac">Mac dan Linux (Terminal):</span><div class="code"><pre><code>shasum -a 256 Slink-macos-universal.zip</code></pre><button class="copy" type="button" data-copy aria-label="Salin" data-i18n-attr="aria-label:copy.a"><svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg></button></div></li>
+      </ol>
+    </section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="index.html" aria-label="Slink"><img src="assets/logo-dark.png" alt="Slink" width="97" height="40"></a>
+      <nav aria-label="Tautan" data-i18n-attr="aria-label:foot.nav">
+        <ul>
+          <li><a href="index.html#unduh" data-i18n="nav.download">Unduh</a></li>
+          <li><a href="install.html" data-i18n="nav.install">Cara pasang</a></li>
+          <li><a href="changelog.html" data-i18n="nav.changelog">Catatan versi</a></li>
+          <li><a href="help.html" data-i18n="nav.help">Bantuan</a></li>
+          <li><a href="privacy.html" data-i18n="nav.privacy">Privasi</a></li>
+          <li><a data-gh href="#" hidden>GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="legal" data-i18n="foot.legal">Slink adalah proyek penggemar dan tidak berafiliasi dengan Slither.io atau pembuatnya. Nama dan merek dagang lain milik pemiliknya masing-masing.</p>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="i18n-en.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
