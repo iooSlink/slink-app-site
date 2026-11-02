@@ -49,7 +49,18 @@
       });
     });
     $$("[data-lang]").forEach(b => b.setAttribute("aria-pressed", b.getAttribute("data-lang") === lang ? "true" : "false"));
+    fixContact();
     refresh();
+  }
+
+  /* Tautan kontak pada kebijakan privasi: workflow Pages mengganti __CONTACT_URL__/__CONTACT_LABEL__ saat situs diterbitkan.
+     Bila situs disajikan tanpa langkah itu (mis. dibuka langsung dari folder), pakai halaman Issues repositori bila diketahui,
+     atau tampilkan teks biasa, supaya tidak pernah ada tautan rusak atau tulisan "__CONTACT_LABEL__". */
+  function fixContact() {
+    $$('a[href="__CONTACT_URL__"]').forEach(a => {
+      if (REPO_OK) { a.setAttribute("href", "https://github.com/" + REPO + "/issues"); a.textContent = "GitHub Issues"; }
+      else a.replaceWith(doc.createTextNode(t("contact.none")));
+    });
   }
 
   doc.addEventListener("click", e => {

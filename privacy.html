@@ -11,15 +11,9 @@
 <meta property="og:site_name" content="Slink">
 <meta property="og:title" content="Privasi Slink" data-i18n-attr="content:meta.t.privacy">
 <meta property="og:description" content="Data apa yang dipakai situs dan game Slink." data-i18n-attr="content:meta.d.privacy">
-<meta property="og:image" content="https://slinkapp.web.app/assets/og.jpg">
-<meta property="og:url" content="https://slinkapp.web.app/privacy.html">
+<meta property="og:image" content="https://slink-app.my.id/assets/og.jpg">
+<meta property="og:url" content="https://slink-app.my.id/privacy.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Privasi Slink" data-i18n-attr="content:meta.t.privacy">
-<meta name="twitter:description" content="Data apa yang dipakai situs dan game Slink." data-i18n-attr="content:meta.d.privacy">
-<meta name="twitter:image" content="https://slinkapp.web.app/assets/og.jpg">
-
-<link rel="canonical" href="https://slinkapp.web.app/privacy.html">
-<meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/Inter-Regular.woff" as="font" type="font/woff" crossorigin>
@@ -69,14 +63,15 @@
 <main id="main" class="wrap">
   <div class="page-head">
     <h1 data-i18n="pv.h1"><span class="dim">Kebijakan</span> privasi.</h1>
-    <p class="lead" data-i18n="pv.lead">Singkatnya: tidak ada pelacakan, tidak ada akun.</p>
+    <p class="lead" data-i18n="pv.lead">Singkatnya: situs ini tidak melacakmu. Game memerlukan akun, dan di sini dijelaskan data apa yang disimpan.</p>
   </div>
   <div class="prose">
       <h2><span data-i18n="pv1">Situs ini</span></h2>
       <div data-i18n="pv1.p"><p>Situs ini tidak memakai cookie pelacak, analitik, atau iklan. Pilihan bahasamu disimpan di penyimpanan lokal browser. Untuk menampilkan versi terbaru, halaman ini meminta data rilis ke API GitHub, jadi GitHub dapat mencatat alamat IP-mu sesuai kebijakannya sendiri.</p></div><h2><span data-i18n="pv2">Game</span></h2>
-      <div data-i18n="pv2.p"><p>Nama, kulit ular, skor tertinggi, dan setelanmu disimpan di perangkatmu saja. Mode offline tidak mengirim data apa pun. Tidak ada akun dan tidak ada pembelian.</p></div><h2><span data-i18n="pv3">Mode online</span></h2>
-      <div data-i18n="pv3.p"><p>Saat memilih server Slither.io atau Battledome, Slink terhubung ke server itu dan mengirim nama, kulit, dan gerakanmu, sama seperti klien Slither.io lain. Kebijakan pemilik server itu yang berlaku di sana; Slink tidak menjalankan atau menyimpan data dari server tersebut.</p></div><h2><span data-i18n="pv4">Versi browser</span></h2>
-      <div data-i18n="pv4.p"><p>Skor dan setelanmu disimpan di penyimpanan browser (IndexedDB) pada perangkat ini, dan hilang bila kamu menghapus data situs.</p></div>
+      <div data-i18n="pv2.p"><p>Setelanmu (suara, kontrol, latar belakang, bahasa) dan sesi loginmu disimpan di perangkatmu. Untuk bermain kamu harus masuk dengan akun (lihat bagian Akun). Bermain melawan bot tidak mengirim data permainan ke mana pun selain sinkron profil akun. Tidak ada iklan dan tidak ada pembelian.</p></div><h2><span data-i18n="pvA">Akun</span></h2>
+      <div data-i18n="pvA.p"><p>Saat mendaftar, server akun Slink menyimpan: <strong>nama pengguna, email, kata sandi dalam bentuk hash</strong> (scrypt; kata sandi aslimu tidak disimpan dan tidak dicatat di log), serta profil permainan: <strong>nama panggilan, kulit, rekor, jumlah permainan dan kill</strong>. Untuk setiap perangkat yang masuk, server juga mencatat waktu, <strong>alamat IP</strong> dan jenis perangkat/peramban (User-Agent) pada sesi itu, untuk keamanan dan pembatasan percobaan masuk. Server juga menulis log akses (waktu, alamat IP, jalur permintaan, kode status, lama proses) untuk keamanan dan pemecahan masalah; log itu tidak berisi kata sandi, token, atau isi permintaan.</p><p>Kegunaannya: memverifikasi login, menyinkronkan profilmu, dan mengirim email pengaturan ulang kata sandi atau pemberitahuan akun yang penting. Email tidak dipakai untuk iklan dan data tidak dijual atau dibagikan ke pihak lain untuk tujuan pemasaran. Sambungan ke server akun memakai HTTPS.</p><p>Statistik dilaporkan oleh game di perangkatmu dan tidak diverifikasi server. Kamu bisa <strong>menghapus akun beserta datanya</strong> kapan saja di dalam game (Menu → Akun → Hapus akun). Cadangan database yang dipegang pengelola dapat menyimpan salinan lama sampai diputar/dihapus sesuai kebijakan pengelola.</p><p>Pengelola server akun ini bertanggung jawab atas data tersebut. Pertanyaan, permintaan akses atau penghapusan data: <a href="https://github.com/iooSlink/slink/issues">GitHub Issues</a>.</p></div><h2><span data-i18n="pv3">Mode online</span></h2>
+      <div data-i18n="pv3.p"><p>Saat memilih server Slither.io atau Battledome, Slink terhubung ke server itu dan mengirim nama, kulit, dan gerakanmu, sama seperti klien Slither.io lain. Kebijakan pemilik server itu yang berlaku di sana; Slink tidak menjalankan atau menyimpan data dari server tersebut. Kata sandi dan token akunmu <strong>tidak pernah</strong> dikirim ke server itu.</p></div><h2><span data-i18n="pv4">Versi browser</span></h2>
+      <div data-i18n="pv4.p"><p>Setelan, skor, dan token sesi loginmu disimpan di penyimpanan browser (IndexedDB) pada perangkat ini, dan hilang bila kamu menghapus data situs. Kata sandi tidak disimpan. Panggilan ke server akun dilakukan langsung dari browsermu.</p></div>
   </div>
 </main>
 <footer class="foot">
