@@ -129,6 +129,20 @@
     return d;
   }
 
+  async function loadReleaseTag(tag) {
+    if (!REPO_OK) return null;
+    const key = "slink.rel." + tag;
+    try {
+      const c = JSON.parse(sessionStorage.getItem(key) || "null");
+      if (c && c.repo === REPO && Date.now() - c.t < 600000) return c.d;
+    } catch (e) { /* tanpa cache */ }
+    const r = await fetch("https://api.github.com/repos/" + REPO + "/releases/tags/" + encodeURIComponent(tag), { headers: { Accept: "application/vnd.github+json" } });
+    if (!r.ok) return null;
+    const d = slim(await r.json());
+    try { sessionStorage.setItem(key, JSON.stringify({ repo: REPO, t: Date.now(), d })); } catch (e) { /* abaikan */ }
+    return d;
+  }
+
   async function webReady() {
     if (location.protocol === "file:") return false;
     try { return (await fetch("play/index.html", { method: "HEAD" })).ok; } catch (e) { return false; }
@@ -136,7 +150,7 @@
 
   const fmtSize = n => (n / 1048576).toFixed(1).replace(".", lang === "id" ? "," : ".") + " MB";
   const fmtDate = iso => { try { return new Date(iso).toLocaleDateString(lang === "id" ? "id-ID" : "en-US", { year: "numeric", month: "short", day: "numeric" }); } catch (e) { return ""; } };
-  const version = () => (release ? release.tag.replace(/^v/i, "") : "");
+  const version = r => ((r || release) ? (r || release).tag.replace(/^v/i, "") : "");
 
   function refresh() {
     /* kartu, bagian cara pasang, dan baris papan peringkat mengikuti status tiap platform */
@@ -146,11 +160,12 @@
       $$('[data-platform="' + p + '"] [data-meta]').forEach(el => {
         if (p === "web") return;
         if (st.s === "ready") {
-          el.textContent = st.asset.size ? t("meta.rel", { v: version(), s: fmtSize(st.asset.size), d: fmtDate(release.at) }) : t("meta.relnos", { v: version(), d: fmtDate(release.at) });
+          const r = st.release || release;
+          el.textContent = st.asset.size ? t("meta.rel", { v: version(r), s: fmtSize(st.asset.size), d: fmtDate(r.at) }) : t("meta.relnos", { v: version(r), d: fmtDate(r.at) });
           el.hidden = false;
         } else { el.textContent = " "; }
       });
-      $$('[data-lb="' + p + '"] [data-ver]').forEach(el => { el.textContent = version(); });
+      $('[data-lb="' + p + '"] [data-ver]').forEach(el => { el.textContent = version(st.release || release); });
       $$('[data-dl="' + p + '"]').forEach(a => {
         if (p === "web") return;
         if (st.s === "ready") { a.href = st.asset.url; a.rel = "noopener"; }
@@ -173,7 +188,7 @@
       let text = lang === "en" ? (EN["hero.cta"] || "Download") : ((lab && idText.get(lab)) || "Unduh");
       if (st.s === "ready" && here !== "web") {
         href = st.asset.url; text = t("cta.for", { p: name });
-        nt = t("note.ready", { p: name, v: version(), s: st.asset.size ? fmtSize(st.asset.size) : "" }).replace(/ · $/, "");
+        nt = t("note.ready", { p: name, v: version(st.release || release), s: st.asset.size ? fmtSize(st.asset.size) : "" }).replace(/ · $/, "");
       } else if (st.s !== "loading") {
         if (state.web.s === "ready") {
           href = "play/"; text = t("cta.play"); nt = here === "web" ? t("note.web") : t("note.soon", { p: name });
@@ -277,13 +292,21 @@
   applyLang(saved === "id" || saved === "en" ? saved : (/^(id|ms)\b/i.test(navigator.language || "") ? "id" : "en"));
 
   (async () => {
-    let rel = null;
+    let rel = null, previous = null;
     try { rel = await loadRelease(); } catch (e) { rel = null; }
     release = rel;
+    if (rel) {
+      try { previous = await loadReleaseTag("v1.1.0"); } catch (e) { previous = null; }
+    }
     PLATS.forEach(p => {
       if (p === "web") return;
-      const a = rel && rel.assets.find(x => MATCH[p].test(x.name));
-      state[p] = a ? { s: "ready", asset: a } : { s: "soon" };
+      let assetRelease = rel;
+      let a = rel && rel.assets.find(x => MATCH[p].test(x.name));
+      if (!a && p === "iphone" && previous) {
+        a = previous.assets.find(x => MATCH[p].test(x.name));
+        if (a) assetRelease = previous;
+      }
+      state[p] = a ? { s: "ready", asset: a, release: assetRelease } : { s: "soon" };
     });
     state.web = { s: (await webReady()) ? "ready" : "soon" };
     refresh();
