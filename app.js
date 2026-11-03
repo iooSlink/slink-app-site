@@ -165,7 +165,7 @@
           el.hidden = false;
         } else { el.textContent = " "; }
       });
-      $('[data-lb="' + p + '"] [data-ver]').forEach(el => { el.textContent = version(st.release || release); });
+      doc.querySelectorAll('[data-lb="' + p + '"] [data-ver]').forEach(el => { el.textContent = version(st.release || release); });
       $$('[data-dl="' + p + '"]').forEach(a => {
         if (p === "web") return;
         if (st.s === "ready") { a.href = st.asset.url; a.rel = "noopener"; }
